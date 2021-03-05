@@ -21,8 +21,8 @@
         
         <form action= "<%=request.getContextPath()%>/Forma" method="post" style="color:white ; font-family: 'Open Sans', sans-serif;">
             <input type="hidden" name="id" value="<%=request.getParameter("id")%>">
-         Name:    <input type="text" name="name" value="<%=request.getParameter("name")%>">
-          Age:    <input type="text" placeholder="int" name="age" value="<%=request.getParameter("age")%>">
+         Name:    <input type="text" name="name" required value="<%=request.getParameter("name")%>">
+          Age:    <input type="text" name="age" maxlength="9" required value="<%=request.getParameter("age")%>">
             <input type="submit" value="Updata Data">
         </form>
     </body>
