@@ -18,7 +18,7 @@
     <body id="forma__main">
         <h1>Margo Lab 3 update page</h1>
         
-        <form action= "<%=request.getContextPath()%>/Data" method="post" style="color:white; font-family: 'Open Sans', sans-serif;">
+        <form action= "<%=request.getContextPath()%>/" method="post" style="color:white; font-family: 'Open Sans', sans-serif;">
             <input type="hidden" name="id" value="0">
         Name:       <input type="text" name="name" required >
          Age:    <input type="text" name="age" maxlength="9" required>

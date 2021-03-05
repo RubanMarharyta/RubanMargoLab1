@@ -1,11 +1,5 @@
 package org.obrii.mit.dp2021.margoi.margoproject;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 
 import java.io.File;
 import java.io.FileInputStream;
@@ -19,12 +13,6 @@ import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-
-
-/**
- *
- * @author 38068
- */
 public class FilesCrud implements DataCrudInterface {
 
     private File file;
@@ -59,21 +47,14 @@ public class FilesCrud implements DataCrudInterface {
 
       @Override
     public List<Data> searchData(String s) {
-
- 
-       
-            
+    
             List<Data> newData = new ArrayList<>();
         for (Data d : this.readData()) {
             
             if(d.getName().contains(s)){
                 newData.add(d);}
-                
-            
-        }
-        
-
-            return newData;
+         }
+        return newData;
 
         
 
@@ -146,12 +127,6 @@ public class FilesCrud implements DataCrudInterface {
     }
 
     
-    public File getFile() {
-        return file;
-    }
-
-    public void setFileName(File file) {
-        this.file = file;
-    }
+    
 
 }

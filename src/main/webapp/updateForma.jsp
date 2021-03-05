@@ -20,7 +20,7 @@
         <h1>Margo Lab 3 update page</h1>
         
         <form action= "<%=request.getContextPath()%>/Forma" method="post" style="color:white ; font-family: 'Open Sans', sans-serif;">
-            <input type="hidden" name="id" value="<%=request.getParameter("id")%>">
+                  <input type="hidden" name="id" value="<%=request.getParameter("id")%>">
          Name:    <input type="text" name="name" required value="<%=request.getParameter("name")%>">
           Age:    <input type="text" name="age" maxlength="9" required value="<%=request.getParameter("age")%>">
             <input type="submit" value="Updata Data">

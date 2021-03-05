@@ -20,50 +20,36 @@
     </head>
     <body id="home__main">
         <h1>Margo Lab 3 main page</h1>
-        <form action= "<%=request.getContextPath()%>/Data" method="get" id="sr__home">
+        <form action= "<%=request.getContextPath()%>/" method="get" id="sr__home">
             <input type="text" name="search">
             <input type="submit" value="search data">
         </form>
         
-        <%
-        List<Data> dataList = (List<Data>) request.getAttribute("data");
-        %>
-        
-       
-        
+        <%List<Data> dataList = (List<Data>) request.getAttribute("data");%>
+                
         <%for(Data data:dataList){%>
-        
-        
-        
-        
-        
-        
         
         <div class="user">
         <p> Id:  <%=data.getId() %>  Name: <%=data.getName()%>  Age: <%=data.getAge()%></p>
 
         <form action="updateForma.jsp" methd="post">
-            <input type="hidden" name="id" value="<%=data.getId() %>">
+            <input type="hidden" name="id" value="<%=data.getId()%>">
             <input type="hidden" name="name" value="<%=data.getName()%>">
-            <input type="hidden" placeholder="integer" name="age" value="<%=data.getAge()%>">
-            
-            
+            <input type="hidden" name="age" value="<%=data.getAge()%>">
             <input type="submit" value="update data">
         </form>
-            <form action="<%=request.getContextPath()%>/Forma" methd="get">
+            
+        <form action="<%=request.getContextPath()%>/Forma" methd="get">
             <input type="hidden" name="id" value="<%=data.getId() %>">
-
             <input type="submit" value="delete data">
-            </form>
+        </form>
         
         </div>
         <%}%>
+        
         <form action="Forma.jsp" id="add__home">
             <input type="submit" value="add data">
         </form>
-        
-        
-        
     </body>
 </html>
         
