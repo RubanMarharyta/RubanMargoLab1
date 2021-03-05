@@ -20,8 +20,8 @@
         
         <form action= "<%=request.getContextPath()%>/Data" method="post" style="color:white; font-family: 'Open Sans', sans-serif;">
             <input type="hidden" name="id" value="0">
-        Name:       <input type="text" name="name">
-         Age:    <input type="text" placeholder="int" name="age">
+        Name:       <input type="text" name="name" required >
+         Age:    <input type="text" name="age" maxlength="9" required>
             <input type="submit" value="Create Data">
         </form>
     </body>
